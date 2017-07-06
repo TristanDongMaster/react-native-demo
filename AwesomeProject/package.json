@@ -1,0 +1,8 @@
+{
+  "name": "AwesomeProject",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "react-web": "0.4.6"
+  }
+}
