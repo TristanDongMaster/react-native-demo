@@ -61,11 +61,7 @@ export default class WebViewExample extends Component {
   }  
   render() {  
     return (  
-      <View style={styles.container}>  
-        <Button
-          title='click'
-          onPress={this.switchView}
-        />
+      <View style={styles.container}> 
         <WebView  
           style={{width:width,height:height,backgroundColor:'gray'}}  
           ref={WEBVIEW_REF}          

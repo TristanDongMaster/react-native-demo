@@ -70,14 +70,10 @@ export default class HomeScreen extends React.Component {
             colors={['#ff0000', '#00ff00', '#0000ff']}
             progressBackgroundColor="#ffff00"
           />} >
-          {
-          	this.state.movies.map((item)=>{
-          		return (
-          			<Text>{item.title}</Text>
-          			)
-          	})
-          }
-          <Text>Hello, Chat App!</Text>
+          <View style={styles.row}>
+            <Image source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}}
+            style={{flex:1, height: 50}} />
+          </View>
 	        <Button
 	          onPress={() => navigate('Chat',{ from: 'home' })}
 	          title="Chat with Lucy"
@@ -100,10 +96,14 @@ export default class HomeScreen extends React.Component {
           <View style={styles.row}>
             <Header name='头部-首页'/>
           </View>
-          <View style={styles.row}>
-            <Image source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}}
-            style={{flex:1, height: 50}} />
-          </View>
+          {
+          	this.state.movies.map((item,index)=>{
+          		return (
+          			<Text key={index}>{item.title}</Text>
+          			)
+          	})
+          }
+          
           <Button
             onPress={this.onButtonPress}
             title="Learn More"
