@@ -10,7 +10,7 @@ import {
   Alert,
   ScrollView,
   RefreshControl,
-  Linking
+  Linking,
 } from 'react-native';
 import Header from '../component/Header.js'
 
@@ -33,14 +33,7 @@ export default class HomeScreen extends React.Component {
     };
   }
   componentDidMount(){
- 	  fetch('https://facebook.github.io/react-native/movies.json')
-	  .then((response) => response.json())
-	  .then((responseJson) => {
-	  	this.setState({movies:responseJson.movies}) 
-	  })
-	  .catch((error) => {
-	    console.error(error);
-	  });
+ 	
   }
   _onRefresh() {
     this.setState({isRefreshing: true});
@@ -52,6 +45,14 @@ export default class HomeScreen extends React.Component {
         refreshData: this.state.refreshTime + 1 +  '次' + ' - ' +  (new Date()).getTime(),
       });
     }, 1000);
+    fetch('https://facebook.github.io/react-native/movies.json')
+    .then((response) => response.json())
+    .then((responseJson) => {
+      this.setState({movies:Object.assign([],this.state.movies,responseJson.movies)}) 
+    })
+    .catch((error) => {
+      console.error(error);
+    });
   }
   onButtonPress(){
     Alert.alert('Button has been pressed!');
