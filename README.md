@@ -45,7 +45,7 @@
 
 # 原理
 
-	##  IOS
+##  IOS
 
 	苹果提供了一个叫做 JavaScript Core 的框架，这是一个 JavaScript 引擎。通过下面这段代码可以简单的感受一下 Objective-C 如何调用 JavaScript 代码：
 
@@ -53,7 +53,7 @@
 		JSValue *jsVal = [context evaluateScript:@"21+7"];  
 		int iVal = [jsVal toInt32];  
 
-	## Andorid
+## Andorid
 
 		(1) 在程序启动的时候，也就是ReactActivity的onCreate函数中，我们会去创建一个ReactInstanceManagerImpl对象
 
