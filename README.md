@@ -76,6 +76,10 @@
 		一个属性onMessage
 		一个方法postMessage
 
+# React Native for Web
+
+	https://github.com/necolas/react-native-web
+
 
 
 
