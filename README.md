@@ -46,6 +46,9 @@
 # 原理
 
 ##  IOS
+	
+	https://bestswifter.com/react-native/
+	http://blog.cnbang.net/tech/2698/
 
 	苹果提供了一个叫做 JavaScript Core 的框架，这是一个 JavaScript 引擎。通过下面这段代码可以简单的感受一下 Objective-C 如何调用 JavaScript 代码：
 
@@ -64,6 +67,15 @@
 		(4) 在创建ReactContext过程中，我们把我们自己注入(MainReactPackage)的和系统生成(CoreModulesPackage)的package通过processPackage方法将其中的各个modules注入到了对应的Registry中
 
 		(5) 最后通过CatalystInstanceImpl中的ReactBridge将java的注册表通过jni传输到了JS层。
+
+# React Native和webview通信
+
+	在React Native 0.37版本中，合并入了react-native-webview-bridge作者的PR，从此React Native中自带的WebView拥有了和Web通信的功能。此版本之前的版本也可以用react-native-webview-bridge或者其他WebView Bridge的方案进行通信。
+
+	新方法：http://www.pinqy.cn/notes/react-native-webview-communication
+		一个属性onMessage
+		一个方法postMessage
+
 
 
 
