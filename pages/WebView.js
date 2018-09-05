@@ -17,7 +17,7 @@ const {width, height} = Dimensions.get('window');
 
 var WEBVIEW_REF = 'webview';
   
-const url = "https://mi.ebatong.com/wallet";  
+const url = "https://www.baidu.com";  
 export default class WebViewExample extends Component {  
   static navigationOptions = ({ navigation }) => {
     const {state, setParams} = navigation;
